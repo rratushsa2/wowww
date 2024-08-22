@@ -197,6 +197,8 @@ local TabList = Main.TabList
 Rayfield.DisplayOrder = 100
 LoadingFrame.Version.Text = Release
 
+Main.Size = UDim2.new(0, 500/2, 0, 475/2)  -- Изменена эта строка
+Topbar.Size = UDim2.new(0, 500/2, 0, 45/2)  -- Изменена эта строка
 
 -- Variables
 
@@ -675,7 +677,7 @@ function RayfieldLibrary:Notify(NotificationSettings)
 		TweenService:Create(Notification.Description, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
 		wait(0.2)
 		if not getgenv().SecureMode then
-			neon:UnbindFrame(Notification.BlurModule)
+						neon:UnbindFrame(Notification.BlurModule)
 			blurlight:Destroy()
 		end
 		wait(0.9)
